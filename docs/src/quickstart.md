@@ -23,6 +23,19 @@ img = rand(4, 4)
 Gray.(img) #hide
 ```
 
+If you create an array with type `Gray`, `IJulia` will automatically display it as a grayscale image.
+
+```@repl array
+img = rand(Gray, 4, 4)
+```
+
+If you have an array of some other type, you can get `IJulia` to display it by converting to `Gray`:
+
+```@repl array
+arr = rand(4, 4)
+Gray.(arr)
+```
+
 We could also select a region-of-interest from a larger image
 
 ```@example array
